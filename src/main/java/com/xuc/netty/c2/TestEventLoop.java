@@ -1,6 +1,7 @@
 package com.xuc.netty.c2;
 
-import io.netty.util.NettyRuntime;
+import io.netty.channel.DefaultEventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -10,6 +11,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TestEventLoop {
     public static void main(String[] args) {
-        log.debug("{}", NettyRuntime.availableProcessors());
+        NioEventLoopGroup boos = new NioEventLoopGroup();
+        NioEventLoopGroup worker = new NioEventLoopGroup();
+        DefaultEventLoopGroup executors = new DefaultEventLoopGroup();
+
+        double v = Double.parseDouble("");
+        System.out.println(v);
     }
 }
